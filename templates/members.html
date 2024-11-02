@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'members.css' %}">
+    <title>Tech | Membros</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'assets/member.jpeg' %}" alt="Uma pessoa feliz no computador" class="logo">
+    </header>
+
+    <main>
+        <h1>Área de members</h1>
+        <p>Uma área de membros online logados</p>
+
+        <a href="http://127.0.0.1:8000/accounts/logout/" class="logout-btn-container" ><p class="logout-btn">LOGOUT</p></a>
+    </main>
+</body>
+</html>

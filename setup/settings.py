@@ -141,11 +141,25 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '123',
-            'secret': '456',
+            'client_id': config('GITHUB_OAUTH_CLIENT_ID'),
+            'secret': config('GITHUB_OAUTH_SECRET'),
             'key': ''
         }
     }
 }
 
 SITE_ID = 1
+
+# URL que o usuário sempre vai ser redirecionado depois que fizer login
+LOGIN_REDIRECT_URL = '/members/'
+
+# Faz com que o usuário não seja deslocado para página do allauth, faz com q vá direto pro github
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+# Faz não ser redirecionado para uma página segundaria
+ACCOUNT_LOGOUT_ON_GET = True
+
+# URL que o usuário sempre vai ser redirecionado depois que fizer o logout
+LOGOUT_REDIRECT_URL = '/'
+
+SESSION_COOKIE_NAME = 'sessionid'
